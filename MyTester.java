@@ -17,8 +17,9 @@ public class MyTester extends TestCase {
 
 	public void testBinarySearch() {
 		MyCalculator calc = new MyCalculator();
-		int[] testArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-		assertEquals("Expected -1" , -1, calc.binarySearch({}, 0), 0.0);
+		int[] testArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int[] testArray2 = new int[]{};
+		assertEquals("Expected -1" , -1, calc.binarySearch(testArray2, 0), 0.0);
 		assertEquals("Expected 4" , 4, calc.binarySearch(testArray, 5), 0.0);
 		assertEquals("Expected 7" , 7, calc.binarySearch(testArray, 8), 0.0);
 		assertEquals("Expected 1" , 1, calc.binarySearch(testArray, 2), 0.0);

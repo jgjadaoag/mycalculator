@@ -6,19 +6,19 @@ public class MyTester extends TestCase {
 	public void testNfactorial() {
 		MyCalculator calc = new MyCalculator();
 
-		int[][] lessThan10 = new int[][]{
-				{-1, -1}, {0, 1}, {1, 1}, {3, 6}, {5, 120}, {9, 362880}
+		int[][] handledValue = new int[][]{
+				 {0, 1}, {1, 1}, {3, 6}, {5, 120}, {9, 362880}, {10, 3628800}, {11, 39916800}, {12, 479001600}
 		};
 	
-		for(int[] testCase: lessThan10) {
+		for(int[] testCase: handledValue) {
 			assertEquals("Expected " + testCase[0] + "! = " + testCase[1], testCase[1], calc.nfactorial(testCase[0]), 0.0);
 		}
 		
-		int[][] greaterThanEqual10 = new int[][]{
-				{10, 3628800}, {11, 39916800}, {12, 479001600}
+		int[][] errorValue = new int[][]{
+				{-1, -1}, {15, -2}
 		};
 	
-		for(int[] testCase: greaterThanEqual10) {
+		for(int[] testCase: errorValue) {
 			assertEquals("Expected " + testCase[0] + "! = " + testCase[1], testCase[1], calc.nfactorial(testCase[0]), 0.0);
 		}
 	}
